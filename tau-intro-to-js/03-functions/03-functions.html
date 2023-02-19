@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./03-functions.js"></script>
+    <h1>Functions in JavaScript</h1>
+    <p>Functions have a few goals:
+    <ul>
+        <li>Help you organize your code for readability</li>
+        <li>Allow you to take blocks of code and make them easily repeatable, thus reducing errors</li>
+    </ul>
+    <br/>
+    We can package our reusable code into a function, and have that function be the only place we have to make the update if changes are needed.
+    <br/>
+    </p>
+    <h2>Create a new JavaScript file</h2>
+    <p>
+    In the same file folder, create a second file with the extension <b>.js</b>. This will be our external JavaScript file.<br/>
+    When add <i>src="./04-functions.js"</i> to the script tag in yout html to link these two files together.<br/>
+    </p>
+    <h2>Write a function</h2>
+    <p>In the .js file, we have the <b>function</b> keyword, we have the <b>name</b> of the function, we have the <b>inputs</b> or <b>parameters</b> inside the <b>()</b><br/>
+    Then inside the {}, the <b>logic</b>, and then whatever the output is.<br/>
+    <br/>
+    When we're saying <b>return</b>, this means give the output back to wherever it's being called.<br/>
+    <br/>
+    <i>
+        function sum(a, b) {<br/>
+            return a+b;<br/>
+        }<br/>
+    </i>
+    </p>
+    <h2>Call the function</h2>
+    <p>
+    You have to use the parentheses () when you want the function to do its job.<br/>
+    <br/>
+    <i>
+        console.log(sum(10, 10));<br/>
+    </i>
+    <br/>
+    The function output can also be stored into a variable.<br/>
+    <br/>
+    <i>
+        const result = sum(5, 25);
+    </i>
+    </p>
+    <h2>Anonymous functions</h2>
+    <p>
+        These are functions that have the same rules - they need an input, output and logic, but <i>we don't give these functions a name</i>, hence <b>anonymous</b>.<br/>
+        <br/>
+        You'll see this most commonly when you need to pass a function as a callback. In JavaScript, <b>callbacks</b> are functions that can be used as inputs to another function.<br/>
+        <br/>
+        A great example of this is the setTimeout function. <i>setTimeout()</i> takes two inputs, a function, and a time in milliseconds.<br/>
+        <br/>
+        The <i>function</i> is the behavior that should happen, and the <i>time</i> in milliseconds is how long we should wait for that behavior to happen.<br/>
+        <br/>
+        <i>
+            setTimeout(function () {<br/>
+                console.log("Hey! You rock!!!");<br/>
+            }, 1000);<br/>
+        </i>
+        <br/>
+        The setTimeout will call our function that we passed in our anonymous function after one second.<br/>
+    </p>
+    <h2>Arrow functions</h2>
+    <p>
+        <b>Arrow functions</b> are just like standard functions, except for there's a bit of syntactic difference.<br/>
+        <br/>
+        The first thing that you'll see with an arrow function is that - well - you <i>don't need the function keyword</i>.<br/>
+        <br/>
+        These parentheses still represent our input list, but between the parentheses () and the curly braces {}, you have to put an <b>arrow</b>.<br/>
+        <br/>
+        Now to make an arrow, you do the equal sign and then a greater than sign - <b>=></b>.<br/>
+        <br/>
+        If you have one line of code only, you can drop the curly braces {}.<br/>
+        <br/>
+        This is how the final arrow function looks:<br/>
+        <br/>
+        <i>
+            setTimeout(() => console.log("Hey! You rock!!!"), 1000);<br/>
+        </i>
+        <br/>
+        In arrow functions, if you have one line of code, the arrow function assumes that that is your <b>return</b> value.<br/>
+        <br/>
+        With arrow functions, if you want to use more than one line of code, you have to bring the curly braces {} back and then you will have to use the return keyword as well.<br/>
+    </p>
+    <h3>Open <i>Inspect --> Console</i> to see the output of today's lesson</h3>
+</body>
+</html>

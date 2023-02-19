@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./06-loops.js"></script>
+    <h1>Loops</h1>
+    <p>
+        <b>Loops</b> allow us to repeat code over and over again.
+        There are multiple types of loops.
+    </p>
+    <h2>Classic for loop</h2>
+    <p>
+        <b>For loops</b> allow us to repeat code a set number of times. And that time is usually based on the condition.<br/>
+        <i><br/>
+            const names = ["Mark", "Sarah", "Ebony"];<br/>
+            <br/>
+            // So you have your <b>initialization</b>, you have your <b>condition</b>, and then you have your <b>increment</b><br/>
+            for (let i = 0; i < names.length; i++) {<br/>
+            console.log(names[i]); // 0, 1, 2<br/>
+            }<br/>
+        </i><br/>
+        For loop is best suited for cases when exactly how many times it should execute is known.<br/>
+    </p>
+    <h2>While loops</h2>
+    <p>
+        A <b>while loop</b> starts with the <i>while</i> keyword. After you type the while keyword, then you put parentheses ().<br/>
+        Inside the parentheses, you put the <b>condition</b> in which to keep running the loop.<br/>
+        So this means, <b>as long as the condition is true, the loop will continue</b>.<br/>
+        <i><br/>
+            let password = "tomorrow";<br/>
+            let userGuess = "";<br/>
+            <br/>
+            while (userGuess !== password) {<br/>
+            userGuess = prompt("Please enter your password");<br/>
+            }<br/>
+            <br/>
+            alert("Login Successful");<br/>
+        </i><br/>
+        While loop is best suited for cases when exactly how many times it should execute is unknown.<br/>
+    </p>
+    <h2>Do while loops</h2>
+    <p>
+        Do this while something happens.<br/>
+        <b>Do while loop</b> is best suited for cases when you need to run the loop body at least once.<br/>
+        <br/>
+        The important difference is that the <b>do while loop will run at least once</b>, <br/>
+        whereas with the while loop, there's no guarantee that it will run at least once as long as condition is false.<br/>
+        <i><br/>
+            let factorial = 1;<br/>
+            let number = 5;<br/>
+            let original = number;<br/>
+            <br/>
+            do {<br/>
+                factorial = factorial * number;<br/>
+                number--<br/>
+            } while (number > 0);<br/>
+        </i>
+    </p>
+    <h3>Open <i>Inspect --> Console</i> to see the output of today's lesson</h3>
+</body>
+</html>

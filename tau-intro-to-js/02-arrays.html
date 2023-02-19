@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const favoriteCookies = [
+            "chocolate chip", //0
+            "iced oatmeal", //1
+            "sugar cookie", //2
+            "butter cookie"
+        ];      
+        favoriteCookies.push("windmill cookies");
+        let cookie = favoriteCookies.pop();
+        console.log(favoriteCookies);
+        console.log("I am so sad because I'm gone - " + cookie);
+        let fav = 3;
+        console.log(favoriteCookies[fav]);
+        console.log(favoriteCookies.length);
+        console.log(favoriteCookies[favoriteCookies.length-1]);
+    </script>
+    <h1>Arrays in JavaScript</h1>
+    <p>
+        <b>Array</b> is a data structure to store multiple values in the same variable<br/>
+        Type <i>const array = [];</i> to create an empty array<br/>
+        Array indices start at 0<br/>
+    </p>
+    <h2>Adding values to an array</h2>
+    <p>There are two ways that you can add values to an array: assignment and push<br/>
+        <br/>
+        <b>Assignment</b><br/>
+        When you create the array, you can add its elements inside the square brackets [] after the equal sign<br/>
+        <br/>
+        <i>
+            const favoriteCookies = [<br/>
+            "chocolate chip", <br/>
+            "iced oatmeal", <br/>
+            "sugar cookie", <br/>
+            "butter cookie"<br/>
+        ]; <br/>
+        </i>
+        <br/>
+        <b>Push</b><br/>
+        You type the name of your variable - it must be an array.<br/>
+        Then type <b>.push()</b>, and whatever goes inside of these parentheses will be added as the last item of your array.<br/>
+        This is really dynamic because what you can do is you can get data maybe from a third party data source and add elements to an array.<br/>
+    </p>
+    <h2>Removing items from an array</h2>
+    <p>
+        To remove items, what you do is use the pop command.<br/>
+        The <b>.pop()</b> is going to remove the last element in the array.<br/>
+        You can actually store the value that was popped off the array: <br/>
+        <br/>
+        <i>let cookie = favoriteCookies.pop();</i><br/>
+    </p>
+    <h2>Accessing an individual item in an array</h2>
+    <p>
+        We have to use the square bracket notation [] with the element index inside:<br/>
+        <br/>
+        <i>console.log(favoriteCookies[0]);</i><br/>
+        <br/>
+        In case you go out of bounds of what the indice range is, in JavaScript you'll get <i>undefined</i><br/>
+        <br/>
+        I can also put a variable <i>fav</i> here and set it to an index value. It's going to replace the fav with the actual value.<br/>
+        <i><br/>
+            let fav = 3;<br/>
+            console.log(favoriteCookies[fav]);<br/>
+        </i>
+    </p>
+    <h2>How many elements are in an array?</h2>
+    <p>
+        Arrays have a property called <b>.length</b>.<br/>
+        <i><br/>
+            console.log(favoriteCookies.length);<br/>
+        </i><br/>
+        Since the array goes from 0 to the length-1, to access the last element type:<br/>
+        <i><br/>
+            console.log(favoriteCookies[favoriteCookies.length-1]);<br/>
+        </i><br/>
+    </p>
+    <h3>Open <i>Inspect --> Console</i> to see the output of today's lesson</h3>
+</body>
+</html>

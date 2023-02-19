@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./05-conditions.js"></script>
+    <h1>Conditions</h1>
+    <p>
+        <b>Control structures</b> are build with <i>if - else if - else</i> keywords followed by conditions that should be met true in order for the code to execute.<br/>
+        When you see the triple equals or three equal signs ===, then what that means is <b>absolutely equals</b>.<br/>
+        <br/>
+        <i>
+            let attendance = 14;<br/>
+            if (attendance < 15) {<br/>
+                console.log("We have room");<br/>
+            } else if (attendance > 15) {<br/>
+                console.log("We're over capacity");<br/>
+            } else {<br/>
+                console.log("We're at full capacity");<br/>
+            }<br/>
+        </i>
+    </p>
+    <h2>Complex conditions</h2>
+    <p>
+        There's a way to have multiple conditions - two special operators that we can use to combine conditions for a single <i>if</i> or <i>else if</i> statement.<br/>
+        <br/>
+        We have "and" represented as two ampersands <b>&&</b> and we have "or" represented as two pipe characters <b>||</b>.<br/>
+        <br/>
+        A truth table for AND:<br/>
+        <ul>
+            <li>true and true equals true</li>
+            <li>true and false equals false</li>
+            <li>false and true equals false</li>
+            <li>false and false equals false</li>
+        </ul>
+        A truth table for OR:<br/>
+        <ul>
+            <li>true or true equals true</li>
+            <li>true or false equals true</li>
+            <li>false or true equals true</li>
+            <li>false or false equals false</li>
+        </ul>
+        <i>
+            const car = {<br/>
+                price: 2000,<br/>
+                color: "red",<br/>
+                numDoors: 4<br/>
+            };<br/>
+            <br/>
+            if (car.price < 2000 || (car.color === "red" && car.numDoors === 4)) {<br/>
+                console.log("We'll take it!");<br/>
+            } else {<br/>
+                console.log("Welp, it's best to keep looking");<br/>
+            }<br/>
+        </i>
+    </p>
+    <h3>Open <i>Inspect --> Console</i> to see the output of today's lesson</h3>
+</body>
+</html>

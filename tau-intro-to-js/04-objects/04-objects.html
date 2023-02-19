@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./04-objects.js"></script>
+    <h1>Objects in JavaScript</h1>
+    <p>
+        <b>Objects</b> are a special data type in JavaScript. They allow us to describe things with a lot of detail - the details are what we will call <b>properties</b>.<br/>
+        The properties allow us to describe our objects.<br/>
+    </p>
+    <h2>Creating Objects - Object Literal</h2>
+    <p>
+        Let's make a new variable called <i>cookie</i>.<br/>
+        <br/>
+        We're going to assign it the value of empty curly braces <b>{}</b>. With these two empty curly braces, we have an <b>object literal</b>.<br/>
+    <i><br/>
+        const cookie = {<br/>
+            name: "Chocolate Chip",<br/>
+            isGlutenFree: false,<br/>
+        };<br/>
+    </i><br/>
+    Note: when working with objects in JavaScript - <b>the order of output is not guaranteed</b>.<br/>
+    <br/>
+    The . (dot) operator is used to access properties of an object.<br/>
+    <br/>
+    The object properties are kind of like variables in a way that you can actually assign them values using the equal sign:<br/>
+    <i><br/>
+        cookie.name = "Chip Chocolate";<br/>
+    </i><br/>
+    You can also access properties on objects by using that with the square brackets [].<br/>
+    The square brackets allow you to access properties via dynamic names or names with special characters:<br/>
+    <i><br/>
+        console.log(cookie.["+Yummy"]);<br/>
+    </i><br/>
+    Object literals are great for representing unique structures but when we need to repeat that structure Classes are better.<br/>
+    </p>
+    <h2>How to create objects using classes</h2>
+    <p>
+        <b>Classes</b> are a type of template to create our objects.<br/>
+        <br/>
+        We're going to use the keyword <b>class</b>, then type Cookie with a capital C because that is the standard for making classes in JavaScript<br/>
+        <br/>
+        We create a variable called myCookie, then we assign it the value of a new Cookie.<br/>
+        <br/>
+        The <b>new</b> keyword creates a new object based on the class's structure.<br/>
+        <i><br/>
+            class Cookie {}<br/>
+            <br/>
+            const myCookie = new Cookie();<br/>
+        </i>
+    </p>
+    <h2>How to create a constructor</h2>
+    <p>
+        The <b>constructor</b> is just the rules that you need to create your class.<br/>
+        <br/>
+        <b>Constructors</b> allow you to set the values for the properties of an object during creation.<br/>
+        <br/>
+        So we want to say this.name, and when we say <b>this</b> in our constructor - <br/>
+        well, we're talking about this new object that we're creating. That's the context we need to keep.<br/>
+        <i><br/>
+            class Cookie {<br/>
+                constructor(name, isGlutenFree) {<br/>
+                    this.name = name;<br/>
+                    this.isGlutenFree = isGlutenFree;<br/>
+                }<br/>
+            }<br/>
+            <br/>
+            const myCookie = new Cookie("Iced Oatmeal", false);<br/>
+        </i>
+    </p>
+    <h2>How to add functions to object literals and classes</h2>
+    <p>
+        In our object literal, we're going to add a function.<br/>
+        <br/>
+        The property name should be eatCookie - this should be a verb as opposed to a noun. It should be an action.<br/>
+        <br/>
+        We're going to assign it the value of a function.<br/>
+        <i><br/>
+            const cookie = {<br/>
+                name: "Chocolate Chip",<br/>
+                isGlutenFree: false,<br/>
+                eatCookie: function () {<br/>
+                    console.log("I am eating " + this.name);<br/>
+                }<br/>
+            };<br/>
+            cookie.eatCookie;<br/>
+        </i><br/>
+        <br/>
+        Let's do the same thing in our Cookie class.<br/>
+        <br/>
+        To accomplish this, we will create what they call a <b>method</b>, which has a function that belongs to a class.<br/>
+        <br/>
+        Inside of the class, you don't need the <i>function</i> keyword.<br/>
+        <i><br/>
+            class Cookie {<br/>
+                constructor(name, isGlutenFree) {<br/>
+                    this.name = name;<br/>
+                    this.isGlutenFree = isGlutenFree;<br/>
+                }<br/>
+                <br/>
+                eatCookie() {<br/>
+                    console.log("I am eating " + this.name);<br/>
+                }<br/>
+            }<br/>
+            <br/>
+            const myCookie = new Cookie("Iced Oatmeal", false);<br/>
+            myCookie.eatCookie();<br/>
+        </i><br/>
+    </p>
+    <h3>Open <i>Inspect --> Console</i> to see the output of today's lesson</h3>
+</body>
+</html>
